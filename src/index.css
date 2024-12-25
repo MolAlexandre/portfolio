@@ -8,6 +8,11 @@
   scroll-behavior: smooth;
 }
 
+body {
+  background: #010103;
+  font-family: 'General Sans', sans-serif;
+}
+
 @layer utilities {
   .c-space {
     @apply sm:px-10 px-3;
@@ -69,7 +74,7 @@
   }
 
   .copy-container {
-    @apply cursor-pointer flex justify-center items-center gap-2;
+    @apply cursor-pointer flex justify-center items-center gap-2 ;
   }
 
   /* projects section  */
@@ -149,6 +154,10 @@
     max-width: 110rem; /* Adjust this value as needed */
   }
 }
+.text-animated {
+  color: #ff6347;
+}
+
 
 .waving-hand {
   animation-name: wave-animation;
@@ -193,34 +202,4 @@
   100% {
     transform: rotate(0deg);
   }
-}
-
-body {
-  background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
-  overflow: hidden;
-  font-family: 'General Sans', sans-serif;
-}
-body {
-  @apply h-screen overflow-hidden;
-  filter: drop-shadow(0 0 10px white);
-}
-
-@keyframes fall {
-  0% {
-    transform: translateY(-10px) scale(var(--scale));
-  }
-  100% {
-    transform: translateY(100vh) scale(var(--scale));
-  }
-}
-
-.snow {
-  @apply absolute w-full h-full;
-}
-
-.snowflake {
-  @apply absolute w-2.5 h-2.5 bg-white rounded-full;
-  opacity: var(--opacity);
-  transform: translateX(var(--x)) translateY(-10px) scale(var(--scale));
-  animation: fall var(--duration) var(--delay) linear infinite;
 }

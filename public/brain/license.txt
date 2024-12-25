@@ -1,0 +1,8 @@
+Model Information:
+* title:	Brain hologram
+* source:	https://sketchfab.com/3d-models/brain-hologram-09d686a1a1f745cba6b2385d0c831214
+* author:	oxterium (https://sketchfab.com/oxterium)
+
+Model License:
+* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
+* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works
