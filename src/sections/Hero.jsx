@@ -11,6 +11,7 @@ import Bulp from "../components/Bulp.jsx";
 import Brain from "../components/Brain.jsx";
 import Button from "../components/Button.jsx";
 import Typed from "typed.js";
+import Computer2 from "../components/Computer2.jsx";
 
 const Hero = () => {
   const isSmallPhone = useMediaQuery({ maxWidth: 480 });
@@ -41,16 +42,16 @@ const Hero = () => {
     brainY,
     brainZ,
   } = useControls({
-    cameraX: { value: 21, min: 0, max: 50 },
-    cameraY: { value: -3, min: -10, max: 10 },
-    cameraZ: { value: 4.5, min: 0, max: 50 },
-    positionX: { value: 1.6, min: -20, max: 50 },
-    positionY: { value: 1.6, min: -20, max: 50 },
-    positionZ: { value: 7.2, min: -20, max: 50 },
+    cameraX: { value: 6.0, min: -10, max: 50 },
+    cameraY: { value: -3.6, min: -10, max: 10 },
+    cameraZ: { value: 2.0, min: 0, max: 50 },
+    positionX: { value: -5.4, min: -20, max: 50 },
+    positionY: { value: -3.9, min: -20, max: 50 },
+    positionZ: { value: -1.9, min: -20, max: 50 },
     lightIntensity: { value: 150, min: 0, max: 300 },
-    brainX: { value: 2.4, min: -20, max: 20 },
-    brainY: { value: 1.2, min: -20, max: 20 },
-    brainZ: { value: -4, min: -20, max: 20 },
+    brainX: { value: -4.8, min: -20, max: 20 },
+    brainY: { value: 2, min: -20, max: 20 },
+    brainZ: { value: -7.3, min: -20, max: 20 },
   });
 
   const el = React.useRef(null);
@@ -59,7 +60,7 @@ const Hero = () => {
       strings: ["Artificial Intelligence.", "Machine Learning.", "Data Science."],
       typeSpeed: 50,
       loop: true,
-      backDelay: 3000, // Délai avant de commencer à supprimer
+      backDelay: 2000 // Délai avant de commencer à supprimer
     });
 
     return () => {
@@ -80,7 +81,7 @@ const Hero = () => {
           </p>
         </div>
       </div>
-      <div className="w-full h-full absolute top-0 left-0 px-1 my-auto">
+      <div className="w-full h-full absolute top-0 left-0 px-1 my-auto z-10">
         <Leva />
         <Canvas
           frameloop="always"
@@ -96,21 +97,19 @@ const Hero = () => {
             />
             <OrbitControls
               enableZoom={false}
-              maxPolarAngle={Math.PI / 2}
-              minPolarAngle={Math.PI / 2}
             />
-            <Computers sizes={sizes} />
-            <Bulp position={[1.6, 1.6, 7.2]} />
+            <Computer2 position={[positionX, positionY, positionZ]} />
+            <Bulp position={[1.6, 1.6, 5.2]} />
             <Brain position={[brainX, brainY, brainZ]} />
             <pointLight
               intensity={lightIntensity}
-              position={[positionX, positionY, positionZ]}
+              position={[1.6, 1.6, 5.2]}
             />
           </Suspense>
           <Preload all />
         </Canvas>
       </div>
-      <div className="absolute bottom-7 left-0 right-0 w-full z-10 c-space">
+      <div className="absolute bottom-7 left-0 right-0 w-full z-20 c-space">
         <a href="#about" className="w-fit">
           <Button
             name="Let's work together"
@@ -118,6 +117,11 @@ const Hero = () => {
             containerClass="sm:w-fit w-full sm:min-w-96"
           />
         </a>
+      </div>
+      <div className="lines">
+        <div className="line"></div>
+        <div className="line"></div>
+        <div className="line"></div>
       </div>
     </section>
   );
