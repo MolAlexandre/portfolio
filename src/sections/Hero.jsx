@@ -13,6 +13,7 @@ import Button from "../components/Button.jsx";
 import Typed from "typed.js";
 import Computer2 from "../components/Computer2.jsx";
 import Computer3 from "../components/Computer3.jsx";
+import NeuralStatue from "../components/NeuralStatue.jsx";
 
 const Hero = () => {
   const isSmallPhone = useMediaQuery({ maxWidth: 480 });
@@ -42,26 +43,43 @@ const Hero = () => {
     brainX,
     brainY,
     brainZ,
+    neuralX,
+    neuralY,
+    neuralZ,
+    bulpX,
+    bulpY,
+    bulpZ,
   } = useControls({
     cameraX: { value: 4.8, min: -10, max: 20 },
-    cameraY: { value: 0, min: -10, max: 20 },
+    cameraY: { value: 0.05, min: -10, max: 20 },
     cameraZ: { value: 0, min: -20, max: 20 },
     positionX: { value: -7.0, min: -20, max: 20 },
     positionY: { value: -4.3, min: -20, max: 20 },
     positionZ: { value: -0.3, min: -20, max: 20 },
     lightIntensity: { value: 150, min: 0, max: 300 },
-    brainX: { value: -6.8, min: -20, max: 20 },
+    brainX: { value: -7.8, min: -20, max: 20 },
     brainY: { value: 1.2, min: -20, max: 20 },
     brainZ: { value: -4.1, min: -20, max: 20 },
+    neuralX: { value: -6.4, min: -20, max: 20 },
+    neuralY: { value:-1.7, min: -20, max: 20 },
+    neuralZ: { value: 2.2, min: -20, max: 20 },
+    bulpX: { value:-4.8, min: -20, max: 20 },
+    bulpY: { value:1.3, min: -20, max: 20 },
+    bulpZ: { value: 3, min: -20, max: 20 },
+
   });
 
   const el = React.useRef(null);
   React.useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ["Artificial Intelligence.", "Machine Learning.", "Data Science."],
+      strings: [
+        "Artificial Intelligence.",
+        "Machine Learning.",
+        "Data Science.",
+      ],
       typeSpeed: 50,
       loop: true,
-      backDelay: 2000 // Délai avant de commencer à supprimer
+      backDelay: 2000, // Délai avant de commencer à supprimer
     });
 
     return () => {
@@ -77,8 +95,7 @@ const Hero = () => {
         </p>
         <div className="line mx-auto">
           <p className="sm:text-2xl text-lg text-gray-400 text-center">
-            Student in {" "}
-            <span ref={el} className="text-animated" />
+            Student in <span ref={el} className="text-animated" />
           </p>
         </div>
       </div>
@@ -97,18 +114,19 @@ const Hero = () => {
               position={[cameraX, cameraY, cameraZ]}
             />
             <OrbitControls
-              enableZoom={false}
-              minPolarAngle={Math.PI / 3}  // 20 degrees upwards
+              enableZoom={true}
+              maxDistance={8}
+              minDistance={3}
+              minPolarAngle={Math.PI / 3} // 20 degrees upwards
               enablePan={false}
             />
             <Computer3 position={[positionX, positionY, positionZ]} />
-            <Bulp position={[1.6, 1.6, 5.2]} />
+            <Bulp position={[bulpX, bulpY, bulpZ]} scale={0.3} />
             <Brain position={[brainX, brainY, brainZ]} />
-            <pointLight
-              intensity={lightIntensity}
-              position={[1.6, 1.6, 5.2]}
-            />
-          </Suspense>
+            <NeuralStatue position={[neuralX,neuralY, neuralZ]} rotation={[0,-Math.PI/3, 0]}/>
+            <pointLight intensity={2} position={[bulpX, bulpY, bulpZ]} />
+            <spotLight position={[bulpX, 1.5, 3]} angle={28} intensity={lightIntensity} distance={20} decay={2.5} penumbra={0.5555}/>
+              </Suspense>
           <Preload all />
         </Canvas>
       </div>
