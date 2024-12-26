@@ -1,0 +1,459 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 1380,
+      "max": [
+        0.0749213919043541,
+        0.020683787763118744,
+        0.02549697458744049
+      ],
+      "min": [
+        -0.07491790503263474,
+        -0.020674552768468857,
+        0.00013844965724274516
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 16560,
+      "componentType": 5126,
+      "count": 1380,
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 1380,
+      "max": [
+        0.9875128269195557,
+        0.9941053986549377
+      ],
+      "min": [
+        0.005888074636459351,
+        0.005888392683118582
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 6240,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 33120,
+      "componentType": 5126,
+      "count": 11126,
+      "max": [
+        0.07458615303039551,
+        0.020209942013025284,
+        0.08599327504634857
+      ],
+      "min": [
+        -0.07458266615867615,
+        -0.020200705155730247,
+        0.0030388059094548225
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 166632,
+      "componentType": 5126,
+      "count": 11126,
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 11040,
+      "componentType": 5126,
+      "count": 11126,
+      "max": [
+        0.991129457950592,
+        0.9910584092140198
+      ],
+      "min": [
+        0.04080452397465706,
+        0.008590036071836948
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 24960,
+      "componentType": 5125,
+      "count": 55776,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 300144,
+      "componentType": 5126,
+      "count": 256,
+      "max": [
+        0.06654093414545059,
+        0.012401560321450233,
+        0.03580068424344063
+      ],
+      "min": [
+        -0.06654093414545059,
+        -0.012401560321450233,
+        0.029181433841586113
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 303216,
+      "componentType": 5126,
+      "count": 256,
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 100048,
+      "componentType": 5126,
+      "count": 256,
+      "max": [
+        0.8016274571418762,
+        0.7272011041641235
+      ],
+      "min": [
+        0.23537151515483856,
+        0.2875502109527588
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 248064,
+      "componentType": 5125,
+      "count": 1140,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "yanix (https://sketchfab.com/yanix)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/neural-network-statue-48047d376e664ed18595395a6e60f100",
+      "title": "Neural Network Statue"
+    },
+    "generator": "Sketchfab-12.65.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 252624,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 102096,
+      "byteOffset": 252624,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 306288,
+      "byteOffset": 354720,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 661008,
+      "uri": "scene.bin"
+    }
+  ],
+  "extensionsUsed": [
+    "KHR_materials_transmission"
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "neural_network_statue_plastic_mat",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.005717309999999998,
+          0.007107300000000003,
+          0.009018289999999998,
+          1.0
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.1
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "neural_network_statue_gold_mat",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.658375,
+          0.53861,
+          0.339526,
+          1.0
+        ],
+        "roughnessFactor": 0.1050729924788258
+      }
+    },
+    {
+      "alphaMode": "BLEND",
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_transmission": {
+          "transmissionFactor": 1.0
+        }
+      },
+      "name": "neural_network_statue_glass_mat",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.8,
+          0.8,
+          0.8,
+          0.25
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.050351434008840575
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "neural_network_statue_plastic_object_neural_network_statue_plastic_mat_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "neural_network_statue_gold_object_neural_network_statue_gold_mat_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 5,
+            "POSITION": 4,
+            "TEXCOORD_0": 6
+          },
+          "indices": 7,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "neural_network_statue_glass_object_neural_network_statue_glass_mat_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 9,
+            "POSITION": 8,
+            "TEXCOORD_0": 10
+          },
+          "indices": 11,
+          "material": 2,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "15c693b72c2f4fc88356f6a10559c403.fbx"
+    },
+    {
+      "children": [
+        3,
+        5,
+        7
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4
+      ],
+      "matrix": [
+        100.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -1.629206793918314e-05,
+        -99.99999999999868,
+        0.0,
+        0.0,
+        99.99999999999868,
+        -1.629206793918314e-05,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "neural_network_statue_plastic_object"
+    },
+    {
+      "mesh": 0,
+      "name": "neural_network_statue_plastic_object_neural_network_statue_plastic_mat_0"
+    },
+    {
+      "children": [
+        6
+      ],
+      "matrix": [
+        100.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -1.629206793918314e-05,
+        -99.99999999999868,
+        0.0,
+        0.0,
+        99.99999999999868,
+        -1.629206793918314e-05,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "neural_network_statue_gold_object"
+    },
+    {
+      "mesh": 1,
+      "name": "neural_network_statue_gold_object_neural_network_statue_gold_mat_0"
+    },
+    {
+      "children": [
+        8
+      ],
+      "matrix": [
+        100.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -1.629206793918314e-05,
+        -99.99999999999868,
+        0.0,
+        0.0,
+        99.99999999999868,
+        -1.629206793918314e-05,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "neural_network_statue_glass_object"
+    },
+    {
+      "mesh": 2,
+      "name": "neural_network_statue_glass_object_neural_network_statue_glass_mat_0"
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ]
+}

@@ -9,7 +9,7 @@
 }
 
 body {
-  background: #010103;
+  background: #111111;
   font-family: 'General Sans', sans-serif;
 }
 
@@ -158,7 +158,6 @@ body {
   color: #ff6347;
 }
 
-
 .waving-hand {
   animation-name: wave-animation;
   animation-duration: 2.5s;
@@ -176,6 +175,7 @@ body {
     rgba(255, 255, 255, 0.025) 100%
   );
 }
+
 
 @keyframes wave-animation {
   0% {

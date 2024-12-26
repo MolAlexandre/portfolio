@@ -1,22 +1,23 @@
 import { myProjects } from "../constants/index.js";
 import React, { useState } from "react";
 import { Canvas } from "@react-three/fiber";
-import {Center } from "@react-three/drei";
+import { Center, OrbitControls } from "@react-three/drei";
 import CanvasLoader from "../components/Loading";
+import { Suspense } from "react";
+import Laptop from "../components/Laptop";
 
 const projectCount = myProjects.length;
 
 const Project = () => {
   const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
 
-
   const handleNavigation = (direction) => {
     setCurrentProjectIndex((prevIndex) => {
-        if (direction === "next") {
-          return prevIndex === projectCount - 1 ? 0 : prevIndex + 1;
-        } else {
-            return prevIndex === 0 ? projectCount -1 : prevIndex -1
-        }
+      if (direction === "next") {
+        return prevIndex === projectCount - 1 ? 0 : prevIndex + 1;
+      } else {
+        return prevIndex === 0 ? projectCount - 1 : prevIndex - 1;
+      }
     });
   };
 
@@ -96,22 +97,22 @@ const Project = () => {
           </div>
         </div>
         <div className="border border-black-300 bg-black-200 rounded-lg h-96 md:h-full">
-            <Canvas>
-                <ambientLight intensity={0.5} />
-                <directionalLight position={[10, 10, 5]} intensity={1} />
-                <Center>
-                    <Suspense fallback ={<CanvasLoader/>} >
-                    <group scale={2} position={[0,-3,0]}>
-                        
-
-                    </group>
-
-
-                    </Suspense>
-
-                </Center>
-            </Canvas>
-
+          <Canvas>
+            <ambientLight intensity={3} />
+            <directionalLight position={[10, 10, 5]} intensity={1} />
+            <Center>
+              <Suspense fallback={<CanvasLoader />}>
+                <group
+                  scale={2}
+                  position={[0.8, -2.3, 0.5]}
+                  rotation={[0.1, -1, 0]}
+                >
+                  <Laptop texture={currentProject.texture} />
+                </group>
+              </Suspense>
+            </Center>
+            <OrbitControls maxPolarAngle={Math.PI / 2} maxDistance={10} />
+          </Canvas>
         </div>
       </div>
     </section>

@@ -12,6 +12,7 @@ import Brain from "../components/Brain.jsx";
 import Button from "../components/Button.jsx";
 import Typed from "typed.js";
 import Computer2 from "../components/Computer2.jsx";
+import Computer3 from "../components/Computer3.jsx";
 
 const Hero = () => {
   const isSmallPhone = useMediaQuery({ maxWidth: 480 });
@@ -42,16 +43,16 @@ const Hero = () => {
     brainY,
     brainZ,
   } = useControls({
-    cameraX: { value: 6.0, min: -10, max: 50 },
-    cameraY: { value: -3.6, min: -10, max: 10 },
-    cameraZ: { value: 2.0, min: 0, max: 50 },
-    positionX: { value: -5.4, min: -20, max: 50 },
-    positionY: { value: -3.9, min: -20, max: 50 },
-    positionZ: { value: -1.9, min: -20, max: 50 },
+    cameraX: { value: 4.8, min: -10, max: 20 },
+    cameraY: { value: 0, min: -10, max: 20 },
+    cameraZ: { value: 0, min: -20, max: 20 },
+    positionX: { value: -7.0, min: -20, max: 20 },
+    positionY: { value: -4.3, min: -20, max: 20 },
+    positionZ: { value: -0.3, min: -20, max: 20 },
     lightIntensity: { value: 150, min: 0, max: 300 },
-    brainX: { value: -4.8, min: -20, max: 20 },
-    brainY: { value: 2, min: -20, max: 20 },
-    brainZ: { value: -7.3, min: -20, max: 20 },
+    brainX: { value: -6.8, min: -20, max: 20 },
+    brainY: { value: 1.2, min: -20, max: 20 },
+    brainZ: { value: -4.1, min: -20, max: 20 },
   });
 
   const el = React.useRef(null);
@@ -70,7 +71,7 @@ const Hero = () => {
 
   return (
     <section className="min-h-screen w-full flex flex-col relative" id="home">
-      <div className="w-full flex flex-col sm:mt-36 mt-20 c-space gap-3">
+      <div className="w-full flex flex-col sm:mt-32 mt-18 c-space gap-3">
         <p className="sm:text-5xl text-3xl font-medium text-white text-center font-generalsans">
           Hi, I am Alexandre
         </p>
@@ -82,7 +83,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="w-full h-full absolute top-0 left-0 px-1 my-auto z-10">
-        <Leva />
+        <Leva hidden/>
         <Canvas
           frameloop="always"
           shadows
@@ -97,8 +98,10 @@ const Hero = () => {
             />
             <OrbitControls
               enableZoom={false}
+              minPolarAngle={Math.PI / 3}  // 20 degrees upwards
+              enablePan={false}
             />
-            <Computer2 position={[positionX, positionY, positionZ]} />
+            <Computer3 position={[positionX, positionY, positionZ]} />
             <Bulp position={[1.6, 1.6, 5.2]} />
             <Brain position={[brainX, brainY, brainZ]} />
             <pointLight
@@ -117,11 +120,6 @@ const Hero = () => {
             containerClass="sm:w-fit w-full sm:min-w-96"
           />
         </a>
-      </div>
-      <div className="lines">
-        <div className="line"></div>
-        <div className="line"></div>
-        <div className="line"></div>
       </div>
     </section>
   );

@@ -15,14 +15,14 @@ const Brain = (props) => {
 
 
   return (
-    <Float floatIntensity={1}>
+    <Float distance= {0.3} speed={0.5} factor={0.5}>
       <group ref={group} {...props} dispose={null}>
         <group name="Sketchfab_Scene">
           <group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, 0]}>
             <group
               name="07e8ba9162674e488df6dd56fc54b2e3fbx"
               rotation={[Math.PI / 2, 0, 0]}
-              scale={0.012}
+              scale={0.010}
             >
               <group name="Object_2">
                 <group name="RootNode">

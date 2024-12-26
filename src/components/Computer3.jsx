@@ -8,22 +8,24 @@ Title: gaming setup v2 (low-poly)
 
 import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
+import { MeshStandardMaterial, } from 'three';
 
 const Computer3 =(props) => {
   const { nodes, materials } = useGLTF('/pc_3/scene.gltf')
+    // Define a new material with a color
+    const customMaterial = new MeshStandardMaterial({ color: '#A9A9A9' });
+
   return (
     <group {...props} dispose={null}>
-      <group name="gaming_setupfbx" scale={0.01}>
-        <group name="desk" rotation={[2e-7, 0, 0]} scale={100}>
+      <group scale={0.01}>
+        <group rotation={[2e-7, 0, 0]} scale={100}>
           <mesh
-            name="desk_Material002_0"
             castShadow
             receiveShadow
             geometry={nodes.desk_Material002_0.geometry}
             material={materials['Material.002']}
           />
           <mesh
-            name="desk_Material001_0"
             castShadow
             receiveShadow
             geometry={nodes.desk_Material001_0.geometry}
@@ -31,19 +33,16 @@ const Computer3 =(props) => {
           />
         </group>
         <group
-          name="Plane006"
           position={[-80.3678131, 411.6998291, -6.1692038]}
           rotation={[2e-7, 0, 0.0098223]}
           scale={83.7014694}>
           <mesh
-            name="Plane006_Material009_0"
             castShadow
             receiveShadow
             geometry={nodes.Plane006_Material009_0.geometry}
             material={materials['Material.009']}
           />
           <mesh
-            name="Plane006_Material010_0"
             castShadow
             receiveShadow
             geometry={nodes.Plane006_Material010_0.geometry}
@@ -51,53 +50,42 @@ const Computer3 =(props) => {
           />
         </group>
         <group
-          name="Cylinder"
           position={[32.2514572, 408.2087097, 356.4216614]}
           rotation={[-Math.PI / 2, -0.019607, 0.5093839]}
           scale={[148.0444489, 148.0444336, 148.0444489]}>
           <mesh
-            name="Cylinder_plastic002_0"
             castShadow
             receiveShadow
             geometry={nodes.Cylinder_plastic002_0.geometry}
             material={materials['plastic.002']}
           />
           <mesh
-            name="Cylinder_screen002_0"
             castShadow
             receiveShadow
             geometry={nodes.Cylinder_screen002_0.geometry}
             material={materials['screen.002']}
           />
         </group>
-        <group
-          name="Plane_Plane001"
-          position={[0, 362.1929321, -239.5490112]}
-          rotation={[2e-7, 0, 0]}
-          scale={100}>
+        <group position={[0, 362.1929321, -239.5490112]} rotation={[2e-7, 0, 0]} scale={100}>
           <mesh
-            name="Plane_Plane001_Material011_0"
             castShadow
             receiveShadow
             geometry={nodes.Plane_Plane001_Material011_0.geometry}
             material={materials['Material.011']}
           />
           <mesh
-            name="Plane_Plane001_Material018_0"
             castShadow
             receiveShadow
             geometry={nodes.Plane_Plane001_Material018_0.geometry}
             material={materials['Material.018']}
           />
           <mesh
-            name="Plane_Plane001_Material019_0"
             castShadow
             receiveShadow
             geometry={nodes.Plane_Plane001_Material019_0.geometry}
             material={materials['Material.019']}
           />
           <mesh
-            name="Plane_Plane001_Material020_0"
             castShadow
             receiveShadow
             geometry={nodes.Plane_Plane001_Material020_0.geometry}
@@ -107,33 +95,28 @@ const Computer3 =(props) => {
         <primitive object={nodes._rootJoint} />
         <primitive object={nodes._rootJoint_1} />
         <group
-          name="whole_boundary_Plane004"
           position={[294.7674255, 0, -77.8738098]}
           rotation={[2e-7, -0.6657898, 1e-7]}
           scale={[31.6343193, 31.6343155, 31.6343193]}>
           <mesh
-            name="whole_boundary_Plane004_plastic_0"
             castShadow
             receiveShadow
             geometry={nodes.whole_boundary_Plane004_plastic_0.geometry}
             material={materials.plastic}
           />
           <mesh
-            name="whole_boundary_Plane004_chair_material_0"
             castShadow
             receiveShadow
             geometry={nodes.whole_boundary_Plane004_chair_material_0.geometry}
             material={materials.chair_material}
           />
           <mesh
-            name="whole_boundary_Plane004__white_metal_0"
             castShadow
             receiveShadow
             geometry={nodes.whole_boundary_Plane004__white_metal_0.geometry}
             material={materials.white_metal}
           />
           <mesh
-            name="whole_boundary_Plane004_black_metal_0"
             castShadow
             receiveShadow
             geometry={nodes.whole_boundary_Plane004_black_metal_0.geometry}
@@ -141,7 +124,6 @@ const Computer3 =(props) => {
           />
         </group>
         <mesh
-          name="pad_Material_0"
           castShadow
           receiveShadow
           geometry={nodes.pad_Material_0.geometry}
@@ -151,7 +133,6 @@ const Computer3 =(props) => {
           scale={[72.6714706, 201.1430054, 100]}
         />
         <mesh
-          name="Plane_Material003_0"
           castShadow
           receiveShadow
           geometry={nodes.Plane_Material003_0.geometry}
@@ -161,17 +142,15 @@ const Computer3 =(props) => {
           scale={28.7804222}
         />
         <mesh
-          name="Plane002_Material004_0"
           castShadow
           receiveShadow
           geometry={nodes.Plane002_Material004_0.geometry}
-          material={materials['Material.004']}
+          material={customMaterial}
           position={[57.1505623, 259.5140381, -108.0997009]}
           rotation={[0.0000026, 1.5072206, -0.0000026]}
           scale={[24.0709648, 26.5339012, 24.0709648]}
         />
         <mesh
-          name="Plane001_Material005_0"
           castShadow
           receiveShadow
           geometry={nodes.Plane001_Material005_0.geometry}
@@ -181,7 +160,6 @@ const Computer3 =(props) => {
           scale={29.2046394}
         />
         <mesh
-          name="Plane003_Material005_0"
           castShadow
           receiveShadow
           geometry={nodes.Plane003_Material005_0.geometry}
@@ -191,7 +169,6 @@ const Computer3 =(props) => {
           scale={[29.2046375, 29.2046394, 29.2046375]}
         />
         <mesh
-          name="Cube_Material014_0"
           castShadow
           receiveShadow
           geometry={nodes.Cube_Material014_0.geometry}
@@ -204,6 +181,7 @@ const Computer3 =(props) => {
     </group>
   )
 }
+
 
 useGLTF.preload('/pc_3/scene.gltf')
 
