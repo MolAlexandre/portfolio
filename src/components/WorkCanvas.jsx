@@ -2,11 +2,12 @@ import React, { useState, useEffect, useMemo } from "react";
 import { Canvas, useLoader } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import * as THREE from "three";
-import NeuralStatue from "./NeuralStatue";
 import Furniture from "./Furniture";
 import CanvasLoader from "./Loading";
 import { Suspense } from "react";
 import { PerspectiveCamera } from "@react-three/drei";
+import Screens from "./Screens";
+import Frame from "./Frame";
 
 const Node = ({ position, color }) => {
   const goldTexture = useLoader(THREE.TextureLoader, "/textures/gold10.jpg");
@@ -164,7 +165,7 @@ const WorkCanvas = ({ path }) => {
 
       const timeoutId = setTimeout(
         () => changeNodeColorsInLayer(layerIndex + 1),
-        600
+        10
       );
       timeoutIds.push(timeoutId);
     };
@@ -178,7 +179,7 @@ const WorkCanvas = ({ path }) => {
   }, [path, positions, connections]);
 
   return (
-    <Canvas style={{background:"gray"}} >
+    <Canvas >
       <Suspense fallback={CanvasLoader}>
         <PerspectiveCamera
           makeDefault
@@ -186,7 +187,7 @@ const WorkCanvas = ({ path }) => {
           aspect={window.innerWidth / window.innerHeight}
           near={0.1}
           far={100}
-          position={[-1.6, 0, 5]}
+          position={[0, 0.1, 3]}
         />
         <ambientLight intensity={1} />
         <directionalLight position={[5, 5, 5]} intensity={1} />
@@ -209,6 +210,7 @@ const WorkCanvas = ({ path }) => {
         <Pole position={[2.5, -0.7, 0]} height={2.75} /> {/* Pole in layer 4 */}
         <Square position={[0, -2.1, 0]} />
         <Furniture position={[0, -7.2, 0]} scale={0.01} />
+        <Frame position={[0, 6, -6]} scale={13} />
         <OrbitControls maxDistance={10}/>
       </Suspense>
     </Canvas>

@@ -114,10 +114,11 @@ const Hero = () => {
               position={[cameraX, cameraY, cameraZ]}
             />
             <OrbitControls
-              enableZoom={true}
-              maxDistance={8}
-              minDistance={3}
+              enableZoom={false}
+              maxPolarAngle={Math.PI /1.5}// 90 degrees
               minPolarAngle={Math.PI / 3} // 20 degrees upwards
+              minAzimuthAngle={Math.PI /3} // 60 degrees to the left
+              maxAzimuthAngle={Math.PI / 1.5} // 60 degrees to the right
               enablePan={false}
             />
             <Computer3 position={[positionX, positionY, positionZ]} />
@@ -125,7 +126,7 @@ const Hero = () => {
             <Brain position={[brainX, brainY, brainZ]} />
             <NeuralStatue position={[neuralX,neuralY, neuralZ]} rotation={[0,-Math.PI/3, 0]}/>
             <pointLight intensity={2} position={[bulpX, bulpY, bulpZ]} />
-            <spotLight position={[bulpX, 1.5, 3]} angle={28} intensity={lightIntensity} distance={20} decay={2.5} penumbra={0.5555}/>
+            <spotLight position={[bulpX, 1.5, 3]} angle={28} intensity={lightIntensity} distance={20} decay={2.8} penumbra={0.5555}/>
               </Suspense>
           <Preload all />
         </Canvas>
