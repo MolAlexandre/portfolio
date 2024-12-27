@@ -2,18 +2,13 @@ import React, { useState, useEffect, useMemo } from "react";
 import { Canvas, useLoader } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import * as THREE from "three";
-import Furniture from "./Furniture";
 import CanvasLoader from "./Loading";
 import { Suspense } from "react";
 import { PerspectiveCamera } from "@react-three/drei";
-import Screens from "./Screens";
 import Frame from "./Frame";
 
 const Node = ({ position, color }) => {
   const goldTexture = useLoader(THREE.TextureLoader, "/textures/gold10.jpg");
-  goldTexture.wrapS = THREE.ClampToEdgeWrapping;
-  goldTexture.wrapT = THREE.ClampToEdgeWrapping;
-  goldTexture.repeat.set(1, 1);
 
   return (
     <mesh position={position}>
@@ -48,7 +43,7 @@ const Connection = ({ start, end, color }) => {
 };
 
 const Pole = ({ position, height }) => {
-  const goldTexture = useLoader(THREE.TextureLoader, "/textures/gold10.jpg");
+  const goldTexture = useLoader(THREE.TextureLoader, "/textures/gold.jpg");
   return (
     <mesh position={position}>
       <cylinderGeometry args={[0.07, 0.07, height, 32]} />
@@ -58,10 +53,10 @@ const Pole = ({ position, height }) => {
 };
 
 const Square = ({ position, size, color }) => {
-  const goldTexture = useLoader(THREE.TextureLoader, "/textures/gold10.jpg");
+  const goldTexture = useLoader(THREE.TextureLoader, "/textures/gold.jpg");
   return (
     <mesh position={position}>
-      <boxGeometry args={[6, 0.2, 2.5]} />
+      <boxGeometry args={[6, 0.5, 2.5]} />
       <meshStandardMaterial color={color} map={goldTexture} />
     </mesh>
   );
@@ -189,13 +184,14 @@ const WorkCanvas = ({ path }) => {
           far={100}
           position={[0, 0.1, 3]}
         />
-        <ambientLight intensity={1} />
+        <ambientLight intensity={0.8} />
         <directionalLight position={[5, 5, 5]} intensity={1} />
+
         {positions.flat().map((pos, index) => (
           <Node
             key={index}
             position={pos}
-            color={nodeColors[JSON.stringify(pos)] || "white"}
+            color={nodeColors[JSON.stringify(pos)]}
           />
         ))}
         {connections.map(([start, end], index) => (
@@ -208,8 +204,7 @@ const WorkCanvas = ({ path }) => {
         ))}
         <Pole position={[-2, -0.5, 0]} height={3} /> {/* Pole in layer 1 */}
         <Pole position={[2.5, -0.7, 0]} height={2.75} /> {/* Pole in layer 4 */}
-        <Square position={[0, -2.1, 0]} />
-        <Furniture position={[0, -7.2, 0]} scale={0.01} />
+        <Square position={[0.1, -2.5, 0]} />
         <Frame position={[0, 6, -6]} scale={13} />
         <OrbitControls maxDistance={10}/>
       </Suspense>
