@@ -70,7 +70,7 @@ body {
   }
 
   .grid-subtext {
-    @apply text-[#afb0b6] text-base font-generalsans;
+    @apply text-[#afb0b6] text-lg font-generalsans;
   }
 
   .copy-container {

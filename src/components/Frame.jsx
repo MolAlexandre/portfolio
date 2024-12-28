@@ -25,7 +25,7 @@ const Frame = (props) => {
             geometry={nodes.painting_aiStandardSurface1_0.geometry}
             position={[0, -0.88419, 0]}
             rotation={[0, -Math.PI / 2,0 ]} // Rotate the image by 90 degrees
-            scale={[2, 0.3, 1]} 
+            scale={[1.5, 0.3, 0.85]} 
           >
             <meshBasicMaterial map={texture1} />
           </mesh>

@@ -11,7 +11,6 @@ import Bulp from "../components/Bulp.jsx";
 import Brain from "../components/Brain.jsx";
 import Button from "../components/Button.jsx";
 import Typed from "typed.js";
-import Computer2 from "../components/Computer2.jsx";
 import Computer3 from "../components/Computer3.jsx";
 import NeuralStatue from "../components/NeuralStatue.jsx";
 

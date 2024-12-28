@@ -290,3 +290,77 @@ export const workExperiences = [
     animation: 'salute',
   },
 ];
+
+export const technologies = [
+
+  {
+    name: "CSS 3",
+    icon: "/logo/css.png",
+  },
+  {
+    name: "JavaScript",
+    icon: "/logo/javascript.png",
+  },
+  {
+    name: "React JS",
+    icon: "/logo/reactjs.png",
+  },
+  {
+    name: "Tailwind CSS",
+    icon: "/logo/tailwind.png",
+  },
+  {
+    name: "Node JS",
+    icon: "/logo/nodejs.png",
+  },
+  {
+    name: "MongoDB",
+    icon: "/logo/mongodb.png",
+  },
+  {
+    name: "Three JS",
+    icon: "/logo/threejs.svg",
+  },
+  {
+    name: "git",
+    icon: "/logo/git.png",
+  },
+  {
+    name: "figma",
+    icon: "/logo/figma.png",
+  },
+  {
+    name: "docker",
+    icon: "/logo/docker.png",
+  },
+    {
+    name: "git",
+    icon: "/logo/git copy.png",
+  },
+  {
+    name: "git",
+    icon: "/logo/git copy2.png",
+  },
+  {
+    name: "git",
+    icon: "/logo/git copy3.png",
+  },
+  {
+    name: "git",
+    icon: "/logo/git copy4.png",
+  },
+  {
+    name: "git",
+    icon: "/logo/git copy5.png",
+  },
+  {
+    name: "git",
+    icon: "/logo/git copy6.png",
+  },
+  {
+    name: "git",
+    icon: "/logo/git copy7.png",
+  },
+  
+
+];
