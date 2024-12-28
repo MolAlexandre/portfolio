@@ -264,7 +264,7 @@ export const calculateSizes = (isSmallPhone, isPhone, isLaptop, isDesktop, isLar
 export const workExperiences = [
   {
     id: 1,
-    name: 'Framer',
+    name: 'Artificial Intelligence',
     pos: 'Lead Web Developer',
     duration: '2022 - Present',
     title: "Framer serves as my go-to tool for creating interactive prototypes. I use it to bring designs to  life, allowing stakeholders to experience the user flow and interactions before development.",
@@ -291,76 +291,99 @@ export const workExperiences = [
   },
 ];
 
-export const technologies = [
 
+
+export const technologies = [
   {
     name: "CSS 3",
     icon: "/logo/css.png",
+    position: [-10, 5, 0],
+    categorie: ["dev"],
   },
   {
     name: "JavaScript",
     icon: "/logo/javascript.png",
+    position: [-10, 0, 0],
+    categorie: ["dev"],
   },
   {
     name: "React JS",
     icon: "/logo/reactjs.png",
+    position: [-10, -5, 0],
+    categorie: ["dev"],
   },
   {
     name: "Tailwind CSS",
     icon: "/logo/tailwind.png",
+    position: [-2.5, 7.5, 0.75],
+    categorie: ["dev"],
   },
   {
     name: "Node JS",
     icon: "/logo/nodejs.png",
+    position: [-2.5, 2.5, -0.75],
+    categorie: ["dev"],
   },
   {
     name: "MongoDB",
     icon: "/logo/mongodb.png",
+    position: [-2.5, -2.5, 0.75],
+    categorie: ["dev"],
   },
   {
     name: "Three JS",
     icon: "/logo/threejs.svg",
+    position: [-2.5, -7.5, -0.75],
+    categorie: ["dev"],
   },
   {
     name: "git",
     icon: "/logo/git.png",
+    position: [5, 7.5, -0.75],
+    categorie: ["dev"],
   },
   {
     name: "figma",
     icon: "/logo/figma.png",
+    position: [5, 2.5, 0.75],
+    categorie: ["dev"],
   },
   {
     name: "docker",
     icon: "/logo/docker.png",
-  },
-    {
-    name: "git",
-    icon: "/logo/git copy.png",
+    position: [5, -2.5, -0.75],
+    categorie: ["dev"],
   },
   {
-    name: "git",
-    icon: "/logo/git copy2.png",
+    name: "firebase",
+    icon: "/logo/firebase.png",
+    position: [5, -7.5, 0.75],
+    categorie: ["dev"],
   },
   {
-    name: "git",
-    icon: "/logo/git copy3.png",
+    name: "typescript",
+    icon: "/logo/typescript.png",
+    position: [12.5, 2.5, 0],
+    categorie: ["dev"],
   },
   {
-    name: "git",
-    icon: "/logo/git copy4.png",
+    name: "scikit-learn",
+    icon: "/logo/scikit-learn.png",
+    position: [20, -2.5, 0],
+    categorie: ["ai"],
   },
   {
-    name: "git",
-    icon: "/logo/git copy5.png",
+    name: "pytorch",
+    icon: "/logo/pytorch.png",
+    position: [12.5, -2.5, 0],
+    categorie: ["ai", "data science"],
   },
   {
-    name: "git",
-    icon: "/logo/git copy6.png",
+    name: "huggingface",
+    icon: "/logo/huggingface.svg",
+    position: [20, -2.5, 0],
+    categorie: ["ai"],
   },
-  {
-    name: "git",
-    icon: "/logo/git copy7.png",
-  },
-  
-
 ];
+
+//'#01f0f5' : '#fff8eb'
