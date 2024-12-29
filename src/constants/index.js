@@ -273,7 +273,7 @@ export const workExperiences = [
   },
   {
     id: 2,
-    name: 'Figma',
+    name: 'Data Science',
     pos: 'Web Developer',
     duration: '2020 - 2022',
     title: "Figma is my collaborative design platform of choice. I utilize it to work seamlessly with team members and clients, facilitating real-time feedback and design iterations. Its cloud-based.",
@@ -282,7 +282,7 @@ export const workExperiences = [
   },
   {
     id: 3,
-    name: 'Notion',
+    name: 'Web & Mobile Development',
     pos: 'Junior Web Developer',
     duration: '2019 - 2020',
     title: "Notion helps me keep my projects organized. I use it for project management, task tracking, and as a central hub for documentation, ensuring that everything from design notes to.",
@@ -385,5 +385,3 @@ export const technologies = [
     categorie: ["ai"],
   },
 ];
-
-//'#01f0f5' : '#fff8eb'

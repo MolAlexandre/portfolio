@@ -1,13 +1,12 @@
 import { useMediaQuery } from "react-responsive";
 import { calculateSizes } from "../constants/index.js";
-import Computers from "../components/Computers.jsx";
 import CanvasLoader from "../components/Loading";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload } from "@react-three/drei";
 import React, { Suspense } from "react";
 import { Leva, useControls } from "leva";
-import { PerspectiveCamera } from "@react-three/drei";
 import Button from "../components/Button.jsx";
+import { PerspectiveCamera } from "@react-three/drei";
 import Typed from "typed.js";
 import Computer3 from "../components/Computer3.jsx";
 import NeuralStatue from "../components/NeuralStatue.jsx";
@@ -37,15 +36,9 @@ const Hero = () => {
     positionY,
     positionZ,
     lightIntensity,
-    brainX,
-    brainY,
-    brainZ,
     neuralX,
     neuralY,
     neuralZ,
-    bulpX,
-    bulpY,
-    bulpZ,
   } = useControls({
     cameraX: { value: 4.8, min: -10, max: 20 },
     cameraY: { value: 0.05, min: -10, max: 20 },
@@ -54,16 +47,9 @@ const Hero = () => {
     positionY: { value: -4.3, min: -20, max: 20 },
     positionZ: { value: -0.3, min: -20, max: 20 },
     lightIntensity: { value: 100, min: 0, max: 300 },
-    brainX: { value: -7.8, min: -20, max: 20 },
-    brainY: { value: 1.2, min: -20, max: 20 },
-    brainZ: { value: -4.1, min: -20, max: 20 },
     neuralX: { value: -6.4, min: -20, max: 20 },
     neuralY: { value:-1.7, min: -20, max: 20 },
     neuralZ: { value: 2.2, min: -20, max: 20 },
-    bulpX: { value:-4.8, min: -20, max: 20 },
-    bulpY: { value:1.3, min: -20, max: 20 },
-    bulpZ: { value: 3, min: -20, max: 20 },
-
   });
 
   const el = React.useRef(null);
