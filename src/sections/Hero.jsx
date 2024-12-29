@@ -7,8 +7,6 @@ import { OrbitControls, Preload } from "@react-three/drei";
 import React, { Suspense } from "react";
 import { Leva, useControls } from "leva";
 import { PerspectiveCamera } from "@react-three/drei";
-import Bulp from "../components/Bulp.jsx";
-import Brain from "../components/Brain.jsx";
 import Button from "../components/Button.jsx";
 import Typed from "typed.js";
 import Computer3 from "../components/Computer3.jsx";
@@ -55,7 +53,7 @@ const Hero = () => {
     positionX: { value: -7.0, min: -20, max: 20 },
     positionY: { value: -4.3, min: -20, max: 20 },
     positionZ: { value: -0.3, min: -20, max: 20 },
-    lightIntensity: { value: 150, min: 0, max: 300 },
+    lightIntensity: { value: 100, min: 0, max: 300 },
     brainX: { value: -7.8, min: -20, max: 20 },
     brainY: { value: 1.2, min: -20, max: 20 },
     brainZ: { value: -4.1, min: -20, max: 20 },
@@ -121,10 +119,7 @@ const Hero = () => {
               enablePan={false}
             />
             <Computer3 position={[positionX, positionY, positionZ]} />
-            <Bulp position={[bulpX, bulpY, bulpZ]} scale={0.3} />
-            <Brain position={[brainX, brainY, brainZ]} />
             <NeuralStatue position={[neuralX,neuralY, neuralZ]} rotation={[0,-Math.PI/3, 0]}/>
-            <pointLight intensity={2} position={[bulpX, bulpY, bulpZ]} />
             <spotLight position={[bulpX, 1.5, 3]} angle={28} intensity={lightIntensity} distance={20} decay={2.8} penumbra={0.5555}/>
               </Suspense>
           <Preload all />

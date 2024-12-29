@@ -26,10 +26,12 @@ const About = () => {
               className="w-2/5 h-full object-cover rounded-lg"
             />
             <div className="w-3/5 flex flex-col">
-              <p className="text-5xl font-semibold mb-2 text-white ">
+              <p className="text-8xl font-semibold font-oswald mb-2 text-white ">
                 Alexandre
               </p>
-              <p className="text-3xl font-medium text-gray-300 ">Molohio</p>
+              <p className="text-5xl font-medium font-alex-brush text-gray-300 ">
+                Molohio
+              </p>
               <p className="grid-subtext mt-5 mb-5">
                 A passionate engineering student at Mines de Saint-Étienne,
                 driven by curiosity and innovation. I specialize in artificial
@@ -50,22 +52,54 @@ const About = () => {
         </div>
         <div className="col-span-1 xl:row-span-2">
           <div className="w-full h-full border border-black-300 bg-black-200 rounded-lg sm:p-7 p-4 flex flex-col gap-5">
-            <p className="grid-headtext">My education / diplome</p>
-            <p className="grid-subtext">logo d'ecole diplome etc</p>
+            <p className="grid-headtext">My Academic Background</p>
+            <p className="grid-subtext">text to explain why</p>
+            <img
+              src="assets/mines.png"
+              alt="logo-mines"
+              className="w-full h-1/3 object-contain rounded-3xl"
+            />
+            <img
+              src="assets/hoche.jpg"
+              alt="logo-hoche"
+              className="w-full h-1/3 object-contain rounded-3xl"
+            />
           </div>
         </div>
         <div className="xl:col-span-1 xl:row-span-2">
-          <div className="grid-container">
-            <p className="grid-headtext">
-              Artificial Intelligence and Machine Learning /Web and Mobile
-              Development / Expertise in modern /Data Science
-            </p>
+          <div className="grid-container flex flex-col justify-between">
+            <p className="grid-headtext">Passions and Areas of Expertise</p>
+            <ul className="about-list mt-10 mb-10">
+              <li className="mb-10">
+                <p className="font-alex-brush text-4xl text-white">
+                  Machine Learning:
+                </p>
+                <p className="grid-subtext">
+                  Exploring and creating innovative AI solutions with a focus on
+                  deep learning and advanced research.
+                </p>
+              </li>
+              <li className="mb-10">
+                <p className="font-alex-brush text-4xl text-white">
+                  Web and Mobile Development:
+                </p>
+                <p className="grid-subtext">
+                  Designing modern applications, integrating front-end and
+                  back-end technologies for seamless user experiences.
+                </p>
+              </li>
+              <li>
+                <p className="font-alex-brush text-4xl text-white">
+                  Data Science and Analytics:
+                </p>
+                <p className="grid-subtext">
+                  Mastering tools and methodologies to extract valuable insights
+                  from complex datasets.
+                </p>
+              </li>
+            </ul>
             <div>
-              <Button
-                name="View skills"
-                isBeam
-                containerClass="w-full mt-10"
-              />
+              <Button name="View skills" isBeam containerClass="w-full mt-10" />
             </div>
           </div>
         </div>
