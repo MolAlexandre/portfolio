@@ -9,16 +9,15 @@ const Brain = (props) => {
   
   useFrame(() => {
     if (group.current) {
-      group.current.rotation.y += 0.01; // Ajustez la vitesse de rotation ici
+      group.current.rotation.y += 0.005; // Ajustez la vitesse de rotation ici
     }
   });
 
 
   return (
-    <Float distance= {0.3} speed={0.5} factor={0.5} floatingRange={[0.1, 0.3]}>
       <group ref={group} {...props} dispose={null}>
         <group name="Sketchfab_Scene">
-          <group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, 0]}>
+          <group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, Math.PI / 2]}>
             <group
               name="07e8ba9162674e488df6dd56fc54b2e3fbx"
               rotation={[Math.PI / 2, 0, 0]}
@@ -80,7 +79,6 @@ const Brain = (props) => {
           </group>
         </group>
       </group>
-    </Float>
   );
 };
 

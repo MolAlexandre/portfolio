@@ -3,6 +3,8 @@ import Button from "../components/Button.jsx";
 import { Canvas } from "@react-three/fiber";
 import CanvasLoader from "../components/Loading.jsx";
 import Brain from "../components/Brain.jsx";
+import { education } from "../constants/index.js";
+import { myProjects } from "../constants/index.js";
 
 const About = () => {
   const [hasCopied, setHasCopied] = useState(false);
@@ -18,6 +20,7 @@ const About = () => {
   return (
     <section className="c-space my-20 py-20" id="about">
       <div className="grid xl:grid-cols-3 xl:grid-rows-8 md:grid-cols-2 grid-cols-1 gap-5 h-full">
+        {/* Qui je suis ?*/}
         <div className="col-span-2 xl:row-span-2">
           <div className="w-full h-full border border-black-300 bg-black-200 rounded-lg sm:p-7 p-4 flex gap-8">
             <img
@@ -50,22 +53,41 @@ const About = () => {
             </div>
           </div>
         </div>
+
+        {/* Education*/}
         <div className="col-span-1 xl:row-span-2">
-          <div className="w-full h-full border border-black-300 bg-black-200 rounded-lg sm:p-7 p-4 flex flex-col gap-5">
+          <div className="w-full h-full border border-black-300 bg-black-200 rounded-lg sm:p-7 flex flex-col gap-5">
             <p className="grid-headtext">My Academic Background</p>
-            <p className="grid-subtext">text to explain why</p>
-            <img
-              src="assets/mines.png"
-              alt="logo-mines"
-              className="w-full h-1/3 object-contain rounded-3xl"
-            />
-            <img
-              src="assets/hoche.jpg"
-              alt="logo-hoche"
-              className="w-full h-1/3 object-contain rounded-3xl"
-            />
+            <div className="sm:py-1 py-2.5 sm:px-5 text-white-600">
+              {education.map((item, index) => (
+                <div
+                  key={index}
+                  className="items-start gap-5 transition-all ease-in-out duration-500 cursor-pointer hover:bg-black-300 rounded-lg "
+                  onMouseEnter={() => handleHover(index)}
+                >
+                  <div className="py-5">
+                    <img
+                      className="w-full rounded-xl object-cover mb-5"
+                      src={item.icon}
+                      alt="logo"
+                    />
+                    <p className="mb-5">
+                      <p className="font-bold text-white-800">{item.name}</p>
+                      {item.pos}
+                      <br />
+                      <span>{item.duration}</span>
+                    </p>
+                    <p className="group-hover:text-white transition-all ease-in-out duration-500">
+                      {item.title}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
+
+        {/* Expersise*/}
         <div className="xl:col-span-1 xl:row-span-2">
           <div className="grid-container flex flex-col justify-between">
             <p className="grid-headtext">Passions and Areas of Expertise</p>
@@ -104,16 +126,16 @@ const About = () => {
           </div>
         </div>
 
-        {/* Projet*/}
+        {/* Eager to learn*/}
         <div className="col-span-2 xl:row-span-2">
           <div className="w-full h-full border border-black-300 bg-black-200 rounded-lg sm:p-7 pt-4 flex flex-col gap-2 justify-center">
             <Canvas>
               <Suspense fallback={CanvasLoader}>
-                <Brain scale={3.6} />
+                <Brain scale={3.2} />
               </Suspense>
             </Canvas>
-            <div className="flex flex-col ">
-              <p className="grid-headtext">
+            <div className="flex flex-col items-start">
+              <p className="grid-headtext ">
                 Always growing, always curious—learning is my priority.
               </p>
               <p className="grid-subtext">
@@ -126,27 +148,46 @@ const About = () => {
             </div>
           </div>
         </div>
+
+        {/* Projets*/}
         <div className="col-span-3 xl:row-span-2">
           <div className="w-full h-full border border-black-300 bg-black-200 rounded-lg sm:p-7 p-4 flex flex-col gap-5 ">
             <p className="grid-headtext">
-              Passionnate / Présentation de projets personnels avec un bouton
-              vers la section "Projets".{" "}
+              Outside of school, I Strive to Create and Learn through Projects.{" "}
             </p>
+            <div className="w-full h-full p-10 flex flex-wrap gap-10 justify-center items-center">
+              {myProjects.map((item, index) => (
+                <div key={index} className="w-1/6 px-2">
+                  <img
+                    src={item.animated_icon}
+                    alt="project"
+                    className="w-full object-contain rounded-lg"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
+
         {/* My vision for the futur*/}
         <div className="xl:col-span-1 xl:row-span-2">
           <div className="grid-container">
             <p className="grid-headtext">
               My vision for the futur / what i stand for
             </p>
-            <div>
-              <Button
-                name="View Projects"
-                isBeam
-                containerClass="w-full mt-10"
-              />
-            </div>
+            <p className="grid-subtext text-justify">
+              What I Stand For I strive to
+              collaborate on meaningful projects and create practical tools that
+              solve real-world problems. My academic journey has fueled my
+              passion for research, and I aim to pursue a Ph.D. in a niche field
+              of AI that challenges me to innovate, automate complex tasks, and
+              make difficult processes more efficient. While I am open to
+              diverse projects, my main focus remains on leveraging AI to drive
+              automation, problem-solving, and innovation. I am deeply committed
+              to staying updated in this rapidly evolving field by constantly
+              learning through documentation, videos, and hands-on exploration.
+              
+            </p>
           </div>
         </div>
 

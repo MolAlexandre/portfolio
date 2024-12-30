@@ -139,8 +139,14 @@ body {
   .work-content_logo {
     @apply rounded-3xl w-16 h-16 p-2 bg-black-600;
   }
+  .work-content_logo_edu {
+    @apply rounded-3xl w-full h-full bg-black-600;
+  }
 
   .work-content_bar {
+    @apply flex-1 w-0.5 mt-4 h-full bg-black-300 group-hover:bg-black-500 group-last:hidden;
+  }
+  .work-content_bar_edu {
     @apply flex-1 w-0.5 mt-4 h-full bg-black-300 group-hover:bg-black-500 group-last:hidden;
   }
 
@@ -177,6 +183,7 @@ body {
 .text-animated {
   color: #ff6347;
 }
+
 
 .waving-hand {
   animation-name: wave-animation;

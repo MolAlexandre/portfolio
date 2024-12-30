@@ -53,3 +53,28 @@ const Tech = () => {
 };
 
 export default Tech;
+
+/*<div className="col-span-1 xl:row-span-2">
+          <div className="w-full h-full border border-black-300 bg-black-200 rounded-lg sm:p-7 p-4 flex flex-col gap-5">
+            <p className="grid-headtext">My Academic Background</p>
+            <div classname="flex items-center w-full ">
+              <img
+                src="assets/mines.png"
+                alt="logo-mines"
+                className="h-30 object-contain rounded-3xl mb-5 mt-5"
+              />
+                <p className="grid-subtext text-center mb-2">
+                  Master of Science - Computer Science 
+                </p>
+                <p className="grid-subtext">
+                  Main Course : Machine Learning, Data Science, Software Engineering, Data Analysis, Artificial Intelligence, Deep Learning, Computer Vision, Natural Language Processing, Data Mining, Big Data, Cloud Computing, IoT
+                </p>
+            </div>
+
+            <img
+              src="assets/hoche.jpg"
+              alt="logo-hoche"
+              className="w-full h-1/3 object-contain rounded-3xl"
+            />
+          </div>
+        </div>*/

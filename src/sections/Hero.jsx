@@ -106,7 +106,7 @@ const Hero = () => {
             />
             <Computer3 position={[positionX, positionY, positionZ]} />
             <NeuralStatue position={[neuralX,neuralY, neuralZ]} rotation={[0,-Math.PI/3, 0]}/>
-            <spotLight position={[bulpX, 1.5, 3]} angle={28} intensity={lightIntensity} distance={20} decay={2.8} penumbra={0.5555}/>
+            <spotLight position={[-4.8, 1.5, 3]} angle={28} intensity={lightIntensity} distance={20} decay={2.8} penumbra={0.5555}/>
               </Suspense>
           <Preload all />
         </Canvas>

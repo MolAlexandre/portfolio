@@ -70,6 +70,7 @@ export const myProjects = [
       border: '0.2px solid #36201D',
       boxShadow: '0px 0px 60px 0px #AA3C304D',
     },
+    animated_icon: '/project/osmose.gif',
     spotlight: '/assets/spotlight1.png',
     tags: [
       {
@@ -107,6 +108,7 @@ export const myProjects = [
       border: '0.2px solid #17293E',
       boxShadow: '0px 0px 60px 0px #2F6DB54D',
     },
+    animated_icon: '/project/text2sql.gif',
     spotlight: '/assets/spotlight2.png',
     tags: [
       {
@@ -146,6 +148,7 @@ export const myProjects = [
       border: '0.2px solid rgba(208, 213, 221, 1)',
       boxShadow: '0px 0px 60px 0px rgba(35, 131, 96, 0.3)',
     },
+    animated_icon: '/project/rgpd.gif',
     spotlight: '/assets/spotlight3.png',
     tags: [
       {
@@ -183,6 +186,7 @@ export const myProjects = [
       border: '0.2px solid #0E2D58',
       boxShadow: '0px 0px 60px 0px #2F67B64D',
     },
+    animated_icon: '/project/chestCancer2.gif',
     spotlight: '/assets/spotlight4.png',
     tags: [
       {
@@ -214,6 +218,7 @@ export const myProjects = [
       'Built with Next.js 14, Cloudinary AI, Clerk, and Stripe, Imaginify combines cutting-edge technology with a user-centric approach. It can be turned into a side income or even a full-fledged business.',
     href: 'https://www.youtube.com/watch?v=Ahwoks_dawU',
     texture: '/textures/project/project5.mp4',
+    animated_icon: '/project/osmose1.gif',
     logo: '/assets/project-logo5.png',
     logoStyle: {
       backgroundColor: '#1C1A43',
@@ -244,7 +249,84 @@ export const myProjects = [
       },
     ],
   },
+  {
+    title: 'Horizon - Online Banking Platform',
+    desc: 'Horizon is a comprehensive online banking platform that offers users a centralized finance management dashboard. It allows users to connect multiple bank accounts, monitor real-time transactions, and seamlessly transfer money to other users.',
+    subdesc:
+      'Built with Next.js 14 Appwrite, Dwolla and Plaid, Horizon ensures a smooth and secure banking experience, tailored to meet the needs of modern consumers.',
+    href: 'https://www.youtube.com/watch?v=PuOVqP_cjkE',
+    texture: '/textures/project/project4.mp4',
+    logo: '/assets/project-logo4.png',
+    logoStyle: {
+      backgroundColor: '#0E1F38',
+      border: '0.2px solid #0E2D58',
+      boxShadow: '0px 0px 60px 0px #2F67B64D',
+    },
+    animated_icon: '/project/chestCancer.gif',
+    spotlight: '/assets/spotlight4.png',
+    tags: [
+      {
+        id: 1,
+        name: 'React.js',
+        path: '/assets/react.svg',
+      },
+      {
+        id: 2,
+        name: 'TailwindCSS',
+        path: 'assets/tailwindcss.png',
+      },
+      {
+        id: 3,
+        name: 'TypeScript',
+        path: '/assets/typescript.png',
+      },
+      {
+        id: 4,
+        name: 'Framer Motion',
+        path: '/assets/framer.png',
+      },
+    ],
+  },
+  {
+    title: 'Horizon - Online Banking Platform',
+    desc: 'Horizon is a comprehensive online banking platform that offers users a centralized finance management dashboard. It allows users to connect multiple bank accounts, monitor real-time transactions, and seamlessly transfer money to other users.',
+    subdesc:
+      'Built with Next.js 14 Appwrite, Dwolla and Plaid, Horizon ensures a smooth and secure banking experience, tailored to meet the needs of modern consumers.',
+    href: 'https://www.youtube.com/watch?v=PuOVqP_cjkE',
+    texture: '/textures/project/project4.mp4',
+    logo: '/assets/project-logo4.png',
+    logoStyle: {
+      backgroundColor: '#0E1F38',
+      border: '0.2px solid #0E2D58',
+      boxShadow: '0px 0px 60px 0px #2F67B64D',
+    },
+    animated_icon: '/project/rgpd-m.gif',
+    spotlight: '/assets/spotlight4.png',
+    tags: [
+      {
+        id: 1,
+        name: 'React.js',
+        path: '/assets/react.svg',
+      },
+      {
+        id: 2,
+        name: 'TailwindCSS',
+        path: 'assets/tailwindcss.png',
+      },
+      {
+        id: 3,
+        name: 'TypeScript',
+        path: '/assets/typescript.png',
+      },
+      {
+        id: 4,
+        name: 'Framer Motion',
+        path: '/assets/framer.png',
+      },
+    ],
+  },
 ];
+
 
 export const calculateSizes = (isSmallPhone, isPhone, isLaptop, isDesktop, isLargeDesktop,  screenHeight) => {
   const deskPositionY = screenHeight > 730 ? -3.25 + (screenHeight - 800) / 500 : -3.25;
@@ -261,6 +343,7 @@ export const calculateSizes = (isSmallPhone, isPhone, isLaptop, isDesktop, isLar
       , 1.6, -2.6] : isLaptop ? [1.5, deskPositionY, -1.5] : isDesktop ? [1.5, deskPositionY, -1.5] : [2, deskPositionY, -1.5],
   };
 };
+
 export const workExperiences = [
   {
     id: 1,
@@ -291,7 +374,24 @@ export const workExperiences = [
   },
 ];
 
-
+export const education = [
+  {
+    id: 1,
+    name: 'École des Mines de Saint-Étienne',
+    pos: 'MSc Computer Science',
+    duration: '2023 - Present',
+    title: "Main courses ----",
+    icon: '/assets/mines.png',
+  },
+  {
+    id: 2,
+    name: 'Lycée Hoche',
+    pos: 'Two-year undergraduate intensive preparation for the entrance exams to top French Engeneering schools',
+    duration: '2020 - 2022',
+    title: "Main courses ----",
+    icon: '/assets/lyceehoche4.png',
+  },
+];
 
 export const technologies = [
   {
