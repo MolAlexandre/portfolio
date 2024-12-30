@@ -5,6 +5,7 @@ import CanvasLoader from "../components/Loading.jsx";
 import Brain from "../components/Brain.jsx";
 import { education } from "../constants/index.js";
 import { myProjects } from "../constants/index.js";
+import AnimatedArrowButton from "../components/AnimatedArrowButton.jsx";
 
 const About = () => {
   const [hasCopied, setHasCopied] = useState(false);
@@ -26,7 +27,7 @@ const About = () => {
             <img
               src="cv_asset/pp1.png"
               alt="grid-1"
-              className="w-2/5 h-full object-cover rounded-lg"
+              className="w-2/5 h-3/4 object-cover rounded-lg"
             />
             <div className="w-3/5 flex flex-col">
               <p className="text-8xl font-semibold font-oswald mb-2 text-white ">
@@ -62,10 +63,10 @@ const About = () => {
               {education.map((item, index) => (
                 <div
                   key={index}
-                  className="items-start gap-5 transition-all ease-in-out duration-500 cursor-pointer hover:bg-black-300 rounded-lg "
+                  className="items-start gap-5 rounded-lg"
                   onMouseEnter={() => handleHover(index)}
                 >
-                  <div className="py-5">
+                  <div className="py-5 flex flex-col h-full ">
                     <img
                       className="w-full rounded-xl object-cover mb-5"
                       src={item.icon}
@@ -77,9 +78,18 @@ const About = () => {
                       <br />
                       <span>{item.duration}</span>
                     </p>
-                    <p className="group-hover:text-white transition-all ease-in-out duration-500">
-                      {item.title}
-                    </p>
+                    <p className="text-white">{item.title}</p>
+                    <div className=" flex justify-end">
+                      <div className="w-3/5 flex justify-end">
+                        <div className="w-full p-2 py-4 rounded-xl hover:bg-black-300 transition-colors duration-500">
+                          <AnimatedArrowButton
+                            name={"View education"}
+                            className="justify-center"
+                            
+                          />
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -87,7 +97,7 @@ const About = () => {
           </div>
         </div>
 
-        {/* Expersise*/}
+        {/* Expertise*/}
         <div className="xl:col-span-1 xl:row-span-2">
           <div className="grid-container flex flex-col justify-between">
             <p className="grid-headtext">Passions and Areas of Expertise</p>
@@ -176,17 +186,16 @@ const About = () => {
               My vision for the futur / what i stand for
             </p>
             <p className="grid-subtext text-justify">
-              What I Stand For I strive to
-              collaborate on meaningful projects and create practical tools that
-              solve real-world problems. My academic journey has fueled my
-              passion for research, and I aim to pursue a Ph.D. in a niche field
-              of AI that challenges me to innovate, automate complex tasks, and
-              make difficult processes more efficient. While I am open to
-              diverse projects, my main focus remains on leveraging AI to drive
-              automation, problem-solving, and innovation. I am deeply committed
-              to staying updated in this rapidly evolving field by constantly
-              learning through documentation, videos, and hands-on exploration.
-              
+              What I Stand For I strive to collaborate on meaningful projects
+              and create practical tools that solve real-world problems. My
+              academic journey has fueled my passion for research, and I aim to
+              pursue a Ph.D. in a niche field of AI that challenges me to
+              innovate, automate complex tasks, and make difficult processes
+              more efficient. While I am open to diverse projects, my main focus
+              remains on leveraging AI to drive automation, problem-solving, and
+              innovation. I am deeply committed to staying updated in this
+              rapidly evolving field by constantly learning through
+              documentation, videos, and hands-on exploration.
             </p>
           </div>
         </div>
