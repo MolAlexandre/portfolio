@@ -5,7 +5,7 @@ import * as THREE from "three";
 
 const Bulp = (props) => {
   const { nodes, materials } = useGLTF("/bulp/scene.gltf");
-  const goldTexture = useLoader(THREE.TextureLoader, "/textures/gold8.jpg");
+  const goldTexture = useLoader(THREE.TextureLoader, "/textures/gold3.jpg");
   return (
     <group {...props} dispose={null}>
       <group rotation={[-1.952, -0.335, -0.885]}>

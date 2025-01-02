@@ -334,6 +334,159 @@ export const myProjects = [
   },
 ];
 
+export const projectIa =[
+  {
+    title: 'Chest Cancer Classifier - AI Medical Tool',
+    desc: 'Chest Cancer Classifier is a cutting-edge AI tool that revolutionizes the way medical professionals diagnose chest cancer. By leveraging machine learning algorithms, it can accurately detect cancerous cells in chest X-ray images, enabling early diagnosis and treatment.',
+    subdesc:
+      'Developed with Python, Pytorch, MLflow, Chest Cancer Classifier is a powerful diagnostic tool that enhances the efficiency and accuracy of chest cancer detection.',
+    href: 'https://www.youtube.com/watch?v=zfAb95tJvZQ',
+    logoStyle: {
+      backgroundColor: '#2A1816',
+      border: '0.2px solid #36201D',
+      boxShadow: '0px 0px 60px 0px #AA3C304D',
+    },
+    etat: 'In Production',
+    animated_icon: '/project/chestCancer.gif',
+    spotlight: '/assets/spotlight1.png',
+    tags: [
+      {
+        id: 1,
+        name: 'React.js',
+        path: '/assets/react.svg',
+      },
+      {
+        id: 2,
+        name: 'TailwindCSS',
+        path: 'assets/tailwindcss.png',
+      },
+      {
+        id: 3,
+        name: 'TypeScript',
+        path: '/assets/typescript.png',
+      },
+      {
+        id: 4,
+        name: 'Framer Motion',
+        path: '/assets/framer.png',
+      },
+    ],
+  },
+  {
+    title: 'Text2SQL - AI Database Query Tool',
+    desc: 'Text2SQL is an advanced AI tool that simplifies the process of generating SQL queries from natural language text. By using state-of-the-art natural language processing algorithms, it can accurately interpret user queries and convert them into SQL commands.',
+    subdesc:
+      'I use rag model, Huggingface, Text2SQL is designed to enhance the efficiency of database management and data retrieval processes, making it an essential tool for data analysts and database administrators.',
+    href: 'https://www.youtube.com/watch?v=y5vE8y_f_OM',
+    logo: '/assets/project-logo2.png',
+    logoStyle: {
+      backgroundColor: '#13202F',
+      border: '0.2px solid #17293E',
+      boxShadow: '0px 0px 60px 0px #2F6DB54D',
+    },
+    etat: 'In Development',
+    animated_icon: '/project/text2sql.gif',
+    spotlight: '/assets/spotlight2.png',
+    tags: [
+      {
+        id: 1,
+        name: 'React.js',
+        path: '/assets/react.svg',
+      },
+      {
+        id: 2,
+        name: 'TailwindCSS',
+        path: 'assets/tailwindcss.png',
+      },
+      {
+        id: 3,
+        name: 'TypeScript',
+        path: '/assets/typescript.png',
+      },
+      {
+        id: 4,
+        name: 'Framer Motion',
+        path: '/assets/framer.png',
+      },
+    ],
+  },
+  {
+    title: 'GPDR Law Auditing with LLM - AI Legal Tool',
+    desc: 'GDPR Law Auditing with LLM is an innovative AI tool that simplifies the process of auditing legal documents for GDPR compliance. By using advanced machine learning algorithms, it can accurately analyze legal texts and identify potential GDPR violations, enabling organizations to ensure compliance with data protection regulations.',
+    subdesc:
+      'Developed with Python, Pytorch, GDPR Law Auditing with LLM is a powerful legal tool that enhances the efficiency and accuracy of GDPR auditing processes',
+    href: 'https://www.youtube.com/watch?v=lEflo_sc82g',
+    logoStyle: {
+      backgroundColor: '#60f5a1',
+      background:
+        'linear-gradient(0deg, #60F5A150, #60F5A150), linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(208, 213, 221, 0.8) 100%)',
+      border: '0.2px solid rgba(208, 213, 221, 1)',
+      boxShadow: '0px 0px 60px 0px rgba(35, 131, 96, 0.3)',
+    },
+    etat: 'In Development',
+    animated_icon: '/project/rgpd-m.gif',
+    spotlight: '/assets/spotlight3.png',
+    tags: [
+      {
+        id: 1,
+        name: 'React.js',
+        path: '/assets/react.svg',
+      },
+      {
+        id: 2,
+        name: 'TailwindCSS',
+        path: 'assets/tailwindcss.png',
+      },
+      {
+        id: 3,
+        name: 'TypeScript',
+        path: '/assets/typescript.png',
+      },
+      {
+        id: 4,
+        name: 'Framer Motion',
+        path: '/assets/framer.png',
+      },
+    ],
+  },
+  {
+    title: 'Reverse Osmosis System Design - Engineering Tool',
+    desc: 'Reverse Osmosis System Design is a comprehensive engineering tool that simplifies the process of designing reverse osmosis systems. By using advanced algorithms and simulation techniques, it can accurately model the performance of RO systems and optimize their design for maximum efficiency and cost-effectiveness.',
+    subdesc:
+      'Conducted Experience and analis with panda and numpy, Reverse Osmosis System Design is designed to enhance the efficiency of water treatment processes, making it an essential tool for environmental engineers and water treatment specialists.',
+    animated_icon: '/project/osmose1.gif',
+    logo: '/assets/project-logo5.png',
+    logoStyle: {
+      backgroundColor: '#1C1A43',
+      border: '0.2px solid #252262',
+      boxShadow: '0px 0px 60px 0px #635BFF4D',
+    },
+    etat:'In Production',
+    spotlight: '/assets/spotlight5.png',
+    tags: [
+      {
+        id: 1,
+        name: 'React.js',
+        path: '/assets/react.svg',
+      },
+      {
+        id: 2,
+        name: 'TailwindCSS',
+        path: 'assets/tailwindcss.png',
+      },
+      {
+        id: 3,
+        name: 'TypeScript',
+        path: '/assets/typescript.png',
+      },
+      {
+        id: 4,
+        name: 'Framer Motion',
+        path: '/assets/framer.png',
+      },
+    ],
+  },
+];
 
 export const calculateSizes = (isSmallPhone, isPhone, isLaptop, isDesktop, isLargeDesktop,  screenHeight) => {
   const deskPositionY = screenHeight > 730 ? -3.25 + (screenHeight - 800) / 500 : -3.25;
@@ -385,7 +538,7 @@ export const education = [
   {
     id: 1,
     name: 'École des Mines de Saint-Étienne',
-    pos: 'MSc Computer Science',
+    pos: 'MSc Computer Science - minor in Microelectronic Systems. Courses included: Data Structures and Algorithms | Database Systems | Computer Networks | Cybersecurity | Machine Learning.',
     duration: '2023 - Present',
     title: "Main courses ----",
     icon: '/assets/mines.png',
