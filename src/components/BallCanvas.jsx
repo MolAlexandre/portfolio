@@ -70,30 +70,29 @@ const generateConnections = (positions) => {
 };
 const tableau = [
   [
-    [-10, 5, 0],
-    [-10, 0, 0],
-    [-10, -5, 0],
+    [-15, 5, 0],
+    [-15, 0, 0],
+    [-15, -5, 0],
   ], // Layer 1: 3 positions
   [
-    [-2.5, 7.5, 0.75],
-    [-2.5, 2.5, -0.75],
-    [-2.5, -2.5, 0.75],
-    [-2.5, -7.5, -0.75],
+    [-7.5, 7.5, 0.75],
+    [-7.5, 2.5, -0.75],
+    [-7.5, -2.5, 0.75],
+    [-7.5, -7.5, -0.75],
   ], // Layer 2: 4 positions
   [
-    [5, 7.5, -0.75],
-    [5, 2.5, 0.75],
-    [5, -2.5, -0.75],
-    [5, -7.5, 0.75],
+    [0, 7.5, -0.75],
+    [0, 2.5, 0.75],
+    [0, -2.5, -0.75],
+    [0, -7.5, 0.75],
   ], // Layer 3: 4 positions
   [
-    [12.5, 5, 0],
-    [12.5, 0, 0],
-    [12.5, -5, 0],
+    [7.5, 5, 0],
+    [7.5, 0, 0],
+    [7.5, -5, 0],
   ], // Layer 4: 2 positions
-  [[20, 0, 0],]
+  [[15, 0, 0]],
 ];
-
 const BallCanvas = ({ path }) => {
   const [nodeColors, setNodeColors] = useState({});
   const [connectionColors, setConnectionColors] = useState([]);
@@ -122,7 +121,7 @@ const BallCanvas = ({ path }) => {
 
       const timeoutId = setTimeout(
         () => changeConnectionColorsBetweenLayers(layerIndex),
-        1000
+        100
       );
       timeoutIds.push(timeoutId);
     };
@@ -167,12 +166,10 @@ const BallCanvas = ({ path }) => {
   return (
     <Canvas>
       <Suspense fallback={<CanvasLoader />}>
-        <Center>
-          <OrbitControls minDistance={10} maxDistance={35} />
-          <PerspectiveCamera makeDefault position={[0, 0, 30]} />
+          <PerspectiveCamera makeDefault position={[0, 0, 35]} />
 
-          <ambientLight intensity={0.5} />
-          <directionalLight position={[0, 0, 5]} intensity={0.5} />
+          <ambientLight intensity={0.1} />
+          <directionalLight position={[0, 0, 5]} intensity={3} />
           {positions.flat().map((pos, index) => (
             <Ball
               key={index}
@@ -189,7 +186,7 @@ const BallCanvas = ({ path }) => {
               color={connectionColors[index]}
             />
           ))}
-        </Center>
+        <OrbitControls minDistance={10} maxDistance={40} />
       </Suspense>
     </Canvas>
   );

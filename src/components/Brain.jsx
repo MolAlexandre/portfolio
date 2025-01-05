@@ -17,7 +17,7 @@ const Brain = (props) => {
   return (
       <group ref={group} {...props} dispose={null}>
         <group name="Sketchfab_Scene">
-          <group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, Math.PI / 2]}>
+          <group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, Math.PI / 2]} position={[0, -0.1, 0]}>
             <group
               name="07e8ba9162674e488df6dd56fc54b2e3fbx"
               rotation={[Math.PI / 2, 0, 0]}

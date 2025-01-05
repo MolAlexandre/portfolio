@@ -95,6 +95,8 @@ export const myProjects = [
         path: '/assets/framer.png',
       },
     ],
+    technologies: ['Next.js', 'Tailwind CSS', 'TypeScript', 'Framer Motion', 'Convex'],
+    concepts: ['AI-powered features', 'Text-to-multiple-voices functionality', 'SaaS'],
   },
   {
     title: 'LiveDoc - Real-Time Google Docs Clone',
@@ -134,12 +136,14 @@ export const myProjects = [
         path: '/assets/framer.png',
       },
     ],
+    technologies: ['Next.js', 'Liveblocks', 'TypeScript'],
+    concepts: ['Real-time collaboration', 'Document editing', 'Scalability'],
   },
   {
     title: 'CarePulse - Health Management System',
     desc: 'An innovative healthcare platform designed to streamline essential medical processes. It simplifies patient registration, appointment scheduling, and medical record management, providing a seamless experience for both healthcare providers and patients.',
     subdesc:
-      'With a focus on efficiency, CarePulse integrantes complex forms and SMS notifications, by using Next.js, Appwrite, Twillio and Sentry that enhance operational workflows.',
+      'With a focus on efficiency, CarePulse integrates complex forms and SMS notifications, by using Next.js, Appwrite, Twillio and Sentry that enhance operational workflows.',
     href: 'https://www.youtube.com/watch?v=lEflo_sc82g',
     texture: '/textures/project/project3.mp4',
     logo: '/assets/project-logo3.png',
@@ -175,6 +179,8 @@ export const myProjects = [
         path: '/assets/framer.png',
       },
     ],
+    technologies: ['Next.js', 'Appwrite', 'Twilio', 'Sentry'],
+    concepts: ['Patient registration', 'Appointment scheduling', 'Medical record management'],
   },
   {
     title: 'Horizon - Online Banking Platform',
@@ -214,6 +220,8 @@ export const myProjects = [
         path: '/assets/framer.png',
       },
     ],
+    technologies: ['Next.js', 'Appwrite', 'Dwolla', 'Plaid'],
+    concepts: ['Finance management', 'Real-time transactions', 'Money transfer'],
   },
   {
     title: 'Imaginify - AI Photo Manipulation App',
@@ -253,85 +261,10 @@ export const myProjects = [
         path: '/assets/framer.png',
       },
     ],
+    technologies: ['Next.js', 'Cloudinary AI', 'Clerk', 'Stripe'],
+    concepts: ['AI-driven image editing', 'Payments system', 'Credits-based model'],
   },
-  {
-    title: 'Horizon - Online Banking Platform',
-    desc: 'Horizon is a comprehensive online banking platform that offers users a centralized finance management dashboard. It allows users to connect multiple bank accounts, monitor real-time transactions, and seamlessly transfer money to other users.',
-    subdesc:
-      'Built with Next.js 14 Appwrite, Dwolla and Plaid, Horizon ensures a smooth and secure banking experience, tailored to meet the needs of modern consumers.',
-    href: 'https://www.youtube.com/watch?v=PuOVqP_cjkE',
-    texture: '/textures/project/project4.mp4',
-    logo: '/assets/project-logo4.png',
-    logoStyle: {
-      backgroundColor: '#0E1F38',
-      border: '0.2px solid #0E2D58',
-      boxShadow: '0px 0px 60px 0px #2F67B64D',
-    },
-    etat:'In Production',
-    animated_icon: '/project/chestCancer.gif',
-    spotlight: '/assets/spotlight4.png',
-    tags: [
-      {
-        id: 1,
-        name: 'React.js',
-        path: '/assets/react.svg',
-      },
-      {
-        id: 2,
-        name: 'TailwindCSS',
-        path: 'assets/tailwindcss.png',
-      },
-      {
-        id: 3,
-        name: 'TypeScript',
-        path: '/assets/typescript.png',
-      },
-      {
-        id: 4,
-        name: 'Framer Motion',
-        path: '/assets/framer.png',
-      },
-    ],
-  },
-  {
-    title: 'Horizon - Online Banking Platform',
-    desc: 'Horizon is a comprehensive online banking platform that offers users a centralized finance management dashboard. It allows users to connect multiple bank accounts, monitor real-time transactions, and seamlessly transfer money to other users.',
-    subdesc:
-      'Built with Next.js 14 Appwrite, Dwolla and Plaid, Horizon ensures a smooth and secure banking experience, tailored to meet the needs of modern consumers.',
-    href: 'https://www.youtube.com/watch?v=PuOVqP_cjkE',
-    texture: '/textures/project/project4.mp4',
-    logo: '/assets/project-logo4.png',
-    logoStyle: {
-      backgroundColor: '#0E1F38',
-      border: '0.2px solid #0E2D58',
-      boxShadow: '0px 0px 60px 0px #2F67B64D',
-    },
-    etat:'In Development',
-    animated_icon: '/project/rgpd-m.gif',
-    spotlight: '/assets/spotlight4.png',
-    tags: [
-      {
-        id: 1,
-        name: 'React.js',
-        path: '/assets/react.svg',
-      },
-      {
-        id: 2,
-        name: 'TailwindCSS',
-        path: 'assets/tailwindcss.png',
-      },
-      {
-        id: 3,
-        name: 'TypeScript',
-        path: '/assets/typescript.png',
-      },
-      {
-        id: 4,
-        name: 'Framer Motion',
-        path: '/assets/framer.png',
-      },
-    ],
-  },
+  // Ajoutez les autres projets ici de la même manière
 ];
 
 export const projectIa =[
@@ -503,34 +436,26 @@ export const calculateSizes = (isSmallPhone, isPhone, isLaptop, isDesktop, isLar
       , 1.6, -2.6] : isLaptop ? [1.5, deskPositionY, -1.5] : isDesktop ? [1.5, deskPositionY, -1.5] : [2, deskPositionY, -1.5],
   };
 };
-
 export const workExperiences = [
   {
     id: 1,
-    name: 'Artificial Intelligence',
-    pos: 'Lead Web Developer',
+    name: 'AG2R LA Mondial',
+    pos: 'Web Developer - AI',
     duration: '2022 - Present',
-    title: "Framer serves as my go-to tool for creating interactive prototypes. I use it to bring designs to  life, allowing stakeholders to experience the user flow and interactions before development.",
+    title: "At AG2R LA Mondial, I developed AI-driven web applications to enhance user experience and streamline internal processes. I collaborated with cross-functional teams to integrate machine learning models into web platforms.",
     icon: '/assets/framer.svg',
-    animation: 'victory',
+    technologies: ['React', 'Node.js'],
+    concepts: ['Machine Learning', 'User Experience'],
   },
   {
     id: 2,
-    name: 'Data Science',
-    pos: 'Web Developer',
+    name: 'RATP',
+    pos: 'Data Scientist - Discovery Internship',
     duration: '2020 - 2022',
-    title: "Figma is my collaborative design platform of choice. I utilize it to work seamlessly with team members and clients, facilitating real-time feedback and design iterations. Its cloud-based.",
+    title: "During my internship at RATP, I analyzed large datasets to uncover insights and support decision-making processes. I worked on predictive modeling and data visualization projects to improve operational efficiency.",
     icon: '/assets/figma.svg',
-    animation: 'clapping',
-  },
-  {
-    id: 3,
-    name: 'Web & Mobile Development',
-    pos: 'Junior Web Developer',
-    duration: '2019 - 2020',
-    title: "Notion helps me keep my projects organized. I use it for project management, task tracking, and as a central hub for documentation, ensuring that everything from design notes to.",
-    icon: '/assets/notion.svg',
-    animation: 'salute',
+    technologies: ['Python', 'Pandas'],
+    concepts: ['Predictive Modeling', 'Data Visualization'],
   },
 ];
 
@@ -643,5 +568,23 @@ export const technologies = [
     icon: "/logo/huggingface.svg",
     position: [20, -2.5, 0],
     categorie: ["ai"],
+  },
+];
+
+export const areaOfExpertise = [
+  {
+    id: 1,
+    title: 'Machine Learning',
+    description: 'Exploring and creating innovative AI solutions with a focus on deep learning and advanced research.',
+  },
+  {
+    id: 2,
+    title: 'Web Development',
+    description: 'Designing modern applications, integrating front-end and back-end technologies for seamless user experiences.',
+  },
+  {
+    id: 3,
+    title: 'Data Science',
+    description: 'Mastering tools and methodologies to extract valuable insights from complex datasets.',
   },
 ];
